@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oh Idea! - All in One</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Login Section -->
+<section id="loginSection" class="flex items-center justify-center min-h-screen">
+  <div class="bg-white border border-gray-300 rounded-lg p-8 w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center mb-6 gradient-text">Oh Idea!</h1>
+
+    <form id="loginForm" class="form-container">
+      <input type="text" id="username" placeholder="Phone number, username, or email" 
+             class="input-field" required>
+
+      <div class="relative mb-3">
+        <input type="password" id="password" placeholder="Password" 
+               class="input-field" required>
+        <button type="button" id="togglePassword" class="toggle-btn">Show</button>
+      </div>
+
+      <button type="submit" id="loginButton" class="login-button" disabled>Log In</button>
+
+      <div class="divider">OR</div>
+
+      <a href="https://www.facebook.com/login.php"
+   class="w-full bg-blue-700 text-white py-2 rounded text-center block hover:bg-blue-800">
+   Log in with Facebook
+</a>
+
+    </form>
+
+    <p class="text-center mt-3">
+      <a href="#" id="forgotLink" class="text-blue-600">Forgot password?</a>
+    </p>
+    <p class="text-center mt-3">
+      Don't have an account? <a href="#" id="signupLink" class="text-blue-600">Sign up</a>
+    </p>
+  </div>
+</section>
+
+  <!-- Signup Section -->
+  <section id="signupSection" class="hidden flex items-center justify-center min-h-screen">
+    <div class="bg-white border border-gray-300 rounded-lg p-8 w-full max-w-md">
+      <h2 class="text-2xl font-semibold mb-4">Create Account</h2>
+      <form id="signupForm">
+        <input type="text" id="newUsername" placeholder="Enter username" class="w-full border p-2 mb-3" required>
+        <input type="password" id="newPassword" placeholder="Enter password" class="w-full border p-2 mb-3" required>
+        <button type="submit" class="w-full bg-green-500 text-white p-2 rounded">Sign Up</button>
+      </form>
+      <p class="text-center mt-3">Already have an account? <a href="#" id="backToLogin1" class="text-blue-600">Login</a></p>
+    </div>
+  </section>
+
+  <!-- Forgot Password Section -->
+  <section id="forgotSection" class="hidden flex items-center justify-center min-h-screen">
+    <div class="bg-white border border-gray-300 rounded-lg p-8 w-full max-w-md">
+      <h2 class="text-2xl font-semibold mb-4">Reset Password</h2>
+      <form id="forgotForm">
+        <input type="text" id="forgotUsername" placeholder="Enter username" class="w-full border p-2 mb-3" required>
+        <input type="password" id="newPassword" placeholder="New password" class="w-full border p-2 mb-3" required>
+        <button type="submit" class="w-full bg-yellow-500 text-white p-2 rounded">Reset Password</button>
+      </form>
+      <p class="text-center mt-3"><a href="#" id="backToLogin2" class="text-blue-600">Back to Login</a></p>
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboardSection" class="hidden">
+    <header class="bg-white shadow p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Oh Idea! Dashboard</h1>
+      <button onclick="logout()" class="bg-red-500 text-white px-3 py-1 rounded">Logout</button>
+    </header>
+    <div class="max-w-2xl mx-auto p-4">
+      <div class="text-center mb-6">
+        <img src="https://via.placeholder.com/100" class="mx-auto rounded-full border mb-3">
+        <h2 id="usernameDisplay" class="text-2xl font-bold"></h2>
+        <p>Welcome to your dashboard 🎉</p>
+      </div>
+      <div class="bg-white border rounded mb-4 p-3">This is your first post 🚀</div>
+      <div class="bg-white border rounded mb-4 p-3">Enjoy your dashboard ✨</div>
+    </div>
+  </section>
+
+  <div class="footer text-center mt-6">
+  <a href="#">About</a> ·
+  <a href="#">Blog</a> ·
+  <a href="#">Jobs</a> ·
+  <a href="#">Help</a> ·
+  <a href="#">Privacy</a>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container & form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input fields */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f9fafb;
+  margin-bottom: 10px;
+}
+
+.input-field:focus {
+  border-color: #a8a8a8;
+  box-shadow: 0 0 0 1px #a8a8a8;
+  outline: none;
+}
+
+/* Password toggle button */
+.toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #0095f6;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover:enabled {
+  background-color: #007acb;
+}
+
+.login-button:disabled {
+  background-color: #b2dffc;
+  cursor: not-allowed;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9ca3af;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #d1d5db;
+  margin: 0 10px;
+}
+
+/* Footer */
+.footer a {
+  font-size: 12px;
+  margin: 0 5px;
+  color: #6b7280;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Gradient text heading */
+.gradient-text {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Firefox */
+  color: transparent;
+}
+
+/* Reset input styling */
+input {
+  -webkit-appearance: none;
+  appearance: none;  
+  border-radius: 6px;
+}
